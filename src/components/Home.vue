@@ -1,3 +1,11 @@
+<script lang="ts">
+import { defineComponent } from "vue";
+
+export default defineComponent({
+    name: 'StyledHome'
+
+})
+</script>
 <template>
     <v-col cols="6">
         <v-img src="headshotEdit.png" contain max-height="500"></v-img>
@@ -11,17 +19,7 @@
         </p>
       </div>
     </v-col>
-
 </template>
-
-<script lang="ts">
-import { defineComponent } from "vue";
-
-export default defineComponent({
-    name: 'StyledHome'
-
-})
-</script>
 
 <style scoped>
 .custom-text-color-name {
@@ -33,7 +31,7 @@ export default defineComponent({
   
 }
 .custom-text-color-description {
-  color: rgb(54, 52, 67) !important;
+  color: rgb(131, 129, 139) !important;
   
 }
 .center-text-along-pic{

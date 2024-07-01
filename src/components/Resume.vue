@@ -1,8 +1,32 @@
+<script lang="ts">
+import { defineComponent } from 'vue';
+import { ref } from 'vue';
+
+
+
+export default defineComponent({
+  name: 'StyledResume',
+  setup() {
+    const panel = ref<string[]>([]);
+
+    return {
+      name: 'Quinten Bettin',
+      email: 'qbettin@udel.edu',
+      phone: '410-652-3831',
+      linkedin: 'https://www.linkedin.com/in/quinten-bettin/',
+      github: 'https://github.com/qbettin',
+      university: 'University of Delaware, Newark',
+      major: 'Computer Science Bachelor of Science major with a Software Enginnering concentration',
+      panel,
+    };
+  },
+});
+</script>
 <template>
-    <v-container class="styled-resume transparent-bg">
+    <v-container class="styled-resume">
       <!-- Contact Information -->
-      <v-list class="contact-info transparent-bg">
-        <v-row>
+      <v-list bg-color="grey-darken-4" class="contact-info">
+        <v-row >
           <v-col>
             <!-- Email -->
             <v-list-item class="contact-info">
@@ -44,15 +68,15 @@
   
       <!-- Education Section -->
       <v-expansion-panels v-model="panel" multiple>
-        <v-expansion-panel class="transparent-bg" value="education">
-          <v-expansion-panel-title>
+        <v-expansion-panel bg-color="grey-darken-4" value="education">
+          <v-expansion-panel-title color="grey-darken-4">
             <v-list-item-title class="custom-text-color-title">
               <v-list-item-title class="font-weight-bold">Education</v-list-item-title>
             </v-list-item-title>
           </v-expansion-panel-title>
           <v-expansion-panel-text>
-            <v-card class="transparent-bg">
-              <v-card-text class="transparent-bg">
+            <v-card elevation="20" color="grey-darken-4">
+              <v-card-text>
                 <p class="first-line"><strong class="custom-text-color-name">{{ university }}</strong><em class="custom-text-color-first-line">Expected May 2025</em></p>
                 <div class="custom-text-color-description">
                   <p>{{ major }}</p>
@@ -66,15 +90,15 @@
         </v-expansion-panel>
   
       <!-- Languages/Technologies Section -->
-        <v-expansion-panel class="transparent-bg" value="langtech">
-          <v-expansion-panel-title>
+        <v-expansion-panel bg-color="grey-darken-4" value="langtech">
+          <v-expansion-panel-title color="grey-darken-4">
             <v-list-item-title class="custom-text-color-title">
               <v-list-item-title class="font-weight-bold">Languages/Technologies</v-list-item-title>
             </v-list-item-title>
           </v-expansion-panel-title>
           <v-expansion-panel-text>
-            <v-card class="transparent-bg">
-              <v-card-text class="transparent-bg">
+            <v-card elevation="20" color="grey-darken-4">
+              <v-card-text>
                 <strong class="custom-text-color-name">Languages</strong>
                 <p class="custom-text-color-description">Java, Python, C, C++, Armv8 Assembly, HTML, CSS, React Libraries, TypeScript/JavaScript</p>
                 <strong class="custom-text-color-name">Technologies</strong>
@@ -85,15 +109,15 @@
         </v-expansion-panel>
   
       <!-- Projects Section -->
-        <v-expansion-panel class="transparent-bg" value="projects">
-          <v-expansion-panel-title>
+        <v-expansion-panel bg-color="grey-darken-4" value="projects">
+          <v-expansion-panel-title color="grey-darken-4">
             <v-list-item-title class="custom-text-color-title">
               <v-list-item-title class="font-weight-bold">Projects</v-list-item-title>
             </v-list-item-title>
           </v-expansion-panel-title>
           <v-expansion-panel-text>
-            <v-card class="transparent-bg">
-              <v-card-text class="transparent-bg">
+            <v-card elevation="20" color="grey-darken-4">
+              <v-card-text>
                 <p class="first-line"><strong class="custom-text-color-name">React Website</strong><em class="custom-text-color-first-line">Student Project</em></p>
                 <p class="custom-text-color-description">Using React Framework, HTML, CSS, TypeScript, and Git. Launched a website using task-based organization in an agile environment. Created TypeScript functions for object-oriented programming.</p>
                 <!-- Add other projects as needed -->
@@ -103,15 +127,15 @@
         </v-expansion-panel>
   
       <!-- Work Experience Section -->
-        <v-expansion-panel class="transparent-bg" value="work">
-          <v-expansion-panel-title>
+        <v-expansion-panel bg-color="grey-darken-4" value="work">
+          <v-expansion-panel-title color="grey-darken-4">
             <v-list-item-title class="custom-text-color-title">
               <v-list-item-title class="font-weight-bold">Work Experience</v-list-item-title>
             </v-list-item-title>
           </v-expansion-panel-title>
           <v-expansion-panel-text>
-            <v-card class="transparent-bg">
-              <v-card-text class="transparent-bg">
+            <v-card elevation="20" color="grey-darken-4">
+              <v-card-text>
                 <p class = "first-line"><strong class="custom-text-color-name">DCS Corp</strong><em class="custom-text-color-first-line">June 2023 - August 2023</em></p>
                 <p class="custom-text-color-description">Used Atlassian suite (Jira, Bitbucket, Confluence) for Agile Development Process. Dockerized ELK stack and MongoDB instances. Processed and curated data from ActiveMQ to ElasticDB. Utilized Kibana for data visualizations.</p>
                 <p class="custom-text-color-first-line right-line"><em>Jan 2024 - Feb 2024</em></p>
@@ -123,15 +147,15 @@
         </v-expansion-panel>
   
       <!-- Activities/Clubs Section -->
-        <v-expansion-panel class="transparent-bg" value="clubs">
-          <v-expansion-panel-title>
+        <v-expansion-panel bg-color="grey-darken-4" value="clubs">
+          <v-expansion-panel-title color="grey-darken-4">
             <v-list-item-title class="custom-text-color-title">
               <v-list-item-title class="font-weight-bold">Activities/Clubs</v-list-item-title>
             </v-list-item-title>
           </v-expansion-panel-title>
           <v-expansion-panel-text>
-            <v-card class="transparent-bg">
-              <v-card-text class="transparent-bg">
+            <v-card elevation="20" color="grey-darken-4">
+              <v-card-text>
                 <p class="first-line"><strong class="custom-text-color-name">Delaware Innovations Fellow (DIF)</strong><em class="custom-text-color-first-line">Sep 2021 - Present</em></p>
                 <p class="custom-text-color-description">Students creating opportunities with personalized projects and spirit-building events. Showcasing overlapping projects to find solutions that fit students' expertise.</p>
                 <p class="first-line"><strong class="custom-text-color-name">CS + Social Good Club</strong><em class="custom-text-color-first-line">March 2022 - December 2023</em></p>
@@ -144,42 +168,10 @@
     </v-container>
   </template>
   
-  <script lang="ts">
-  import { defineComponent } from 'vue';
-  import { ref } from 'vue';
-
-
-  
-  export default defineComponent({
-    name: 'StyledResume',
-    setup() {
-      const panel = ref(['education', 'langtech', 'projects', 'work', 'clubs']);
-
-      return {
-        name: 'Quinten Bettin',
-        email: 'qbettin@udel.edu',
-        phone: '410-652-3831',
-        linkedin: 'https://www.linkedin.com/in/quinten-bettin/',
-        github: 'https://github.com/qbettin',
-        university: 'University of Delaware, Newark',
-        major: 'Computer Science Bachelor of Science major with a Software Enginnering concentration',
-        educationExpanded: true,
-        languagesExpanded: true,
-        projectsExpanded: true,
-        workExperienceExpanded: true,
-        activitiesExpanded: true,
-        panel,
-      };
-    },
-  });
-  </script>
   
   <style scoped>
   .styled-resume {
     padding: 0px;
-  }
-  .transparent-bg {
-    background-color: rgb(30, 30, 30);
   }
   .contact-info {
     justify-content: space-around;
@@ -197,7 +189,7 @@
   }
   
   .contact-info a {
-    color: #114b89;
+    color: #34669b;
     text-decoration: none;
   }
   
@@ -205,7 +197,7 @@
     font-weight: bold;
   }
 .custom-text-color-name {
-  color: rgb(13, 48, 145) !important;
+  color: rgb(45, 82, 181) !important;
   font-size: large;
   text-align: justify;
   line-height: 1.5
@@ -215,7 +207,7 @@
   text-align: justify;
 }
 .custom-text-color-description {
-  color: rgb(130, 129, 141) !important;
+  color: rgb(171, 171, 174) !important;
   font-size: medium;
   line-height: 1.5;
 }
