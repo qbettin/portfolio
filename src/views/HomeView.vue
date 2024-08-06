@@ -25,11 +25,9 @@ export default defineComponent({
       <v-row justify="center">
         <Home class="home"></Home>
       </v-row>
-      <v-divider></v-divider>
       <v-row justify="center">
         <Resume class="resume" id="resume"></Resume>
       </v-row>
-      <v-divider></v-divider>
       <v-row justify="center">
         <Experience class="experience" id="experience"></Experience>
       </v-row>
