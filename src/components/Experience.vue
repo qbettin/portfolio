@@ -8,7 +8,7 @@ export default defineComponent({
   components: { Elastic, Kibana },
   setup() {
     const panel = ref<string[]>([]);
-    const sliderValue = ref(1); // 0: Elastic, 1: None, 2: Kibana
+    const sliderValue = ref(0); // 0: Elastic, 1: None, 2: Kibana
 
     const changeSliderValue = (value: number) => {
       sliderValue.value = value;
@@ -51,7 +51,7 @@ export default defineComponent({
           <v-expansion-panel-text>
             <v-slider
               v-model="sliderValue"
-              :max="2"
+              :max="1"
               class="mx-4"
               color="primary"
               track-color="grey"
@@ -61,12 +61,12 @@ export default defineComponent({
                 <v-btn color="primary" @click="this.sliderValue = 0">Sensor Data to ElasticDB</v-btn>
               </template>
               <template v-slot:append>
-                <v-btn color="primary" @click="this.sliderValue = 2">Kibana Visualizations</v-btn>
+                <v-btn color="primary" @click="this.sliderValue = 1">Kibana Visualizations</v-btn>
               </template>
             </v-slider>
             <div>
-              <Elastic v-if="sliderValue === 0" />
-              <Kibana v-if="sliderValue === 2" />
+              <Elastic v-if="sliderValue <= 0.5" />
+              <Kibana v-else/>
             </div>
           </v-expansion-panel-text>
         </v-card>

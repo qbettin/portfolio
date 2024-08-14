@@ -44,18 +44,18 @@
       </v-sheet>
     </v-card>
 </template>
-  
+
 <style scoped>
   .flip-card {
     perspective: 2000px;
     margin: 10px;
   }
-  
+
   .flip-card-inner {
     transition: transform 0.6s;
     transform-style: preserve-3d;
   }
-  
+
   .flipped {
     transform: rotateY(180deg);
   }
@@ -75,13 +75,12 @@
     overflow-wrap: break-word;
     line-height: inherit;
   }
-  
+
   .flip-card-back {
-    background-color: #103852; /* Back side background */
+    background-color: #1d2633; /* Back side background */
     color: white;
     transform: rotateY(180deg);
     height: 100%;
     overflow: auto;
   }
 </style>
-  
