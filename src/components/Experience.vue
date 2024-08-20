@@ -5,7 +5,6 @@ import Kibana from '@/components/Kibana.vue'
 
 export default defineComponent({
   name: 'StyledExperience',
-  components: { Elastic, Kibana },
   setup() {
     const panel = ref<string[]>([]);
     const sliderValue = ref(0); // 0: Elastic, 1: None, 2: Kibana
@@ -29,10 +28,7 @@ export default defineComponent({
     <v-divider />
     <v-card-text class="custom-grey-background">
       <v-row>
-        <v-col cols="4" align-self="center">
-          <img src="dcscorpLogo.png" alt="DCS Corp Logo" class="logo-img">
-        </v-col>
-        <v-col cols="8" align-self="center">
+        <v-col cols="12" align-self="center">
           <ul class="bullet-list">
             <li>DCS is a firm providing engineering, programmatic and technical support services to the Department of Defense and other customers focused on national security</li>
             <li>I have worked here for nearly 2 years as an intern</li>
@@ -64,10 +60,6 @@ export default defineComponent({
                 <v-btn color="primary" @click="this.sliderValue = 1">Kibana Visualizations</v-btn>
               </template>
             </v-slider>
-            <div>
-              <Elastic v-if="sliderValue <= 0.5" />
-              <Kibana v-else/>
-            </div>
           </v-expansion-panel-text>
         </v-card>
       </v-expansion-panel>
