@@ -1,6 +1,7 @@
 <script lang="ts">
+
 export default {
-  name: 'ElasticComponent',
+  name: 'PopupComponent',
 }
 </script>
 
@@ -9,16 +10,18 @@ export default {
     <v-col align="center">
       <v-card class="visualization-card">
         <v-card-text>
-          <h3 class="card-header">Automated Data Ingestion and Visualization with ElasticDB</h3>
+          <h3 class="card-header">Reusable Popup</h3>
           <p>
-            This project involved the <strong>automated ingestion of data</strong> from an ActiveMQ data bus, which was then programmatically stored in an ElasticDB data store. A specialized Query class facilitated <strong>custom queries</strong> to retrieve data based on specific sensor inputs or other defined properties.
+            On the same company internal tool, I was tasked to replace all of the generic browser popups for confirmations on certain actions. I created a <strong>modular and reusable</strong> popup component in <strong>Vue </strong>which also looked much nicer than the default popups. I used <strong>props</strong> which controlled the text that was displayed, button names, and functions on button clicks. This made replacing all the popups an easier task.
           </p>
           <p>
-            The system dynamically created new index patterns in ElasticDB, allowing for <strong>targeted data visualization</strong> based on the queried results. This setup was designed to be highly modular, enabling efficient data management and visualization for various use cases.
+            Some popups needed more than <strong>a confirm and cancel button</strong>, which made a modular popup more difficult, but adding more props solved this issue.
+          </p>
+          <p>
+            I even <strong>reused</strong> this component on other company sites, proving its modularity.
           </p>
         </v-card-text>
       </v-card>
-
     </v-col>
   </v-row>
 </template>
@@ -59,4 +62,5 @@ p {
 
 p strong {
   color: #00d9ff;
-}</style>
+}
+</style>

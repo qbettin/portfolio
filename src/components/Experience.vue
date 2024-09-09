@@ -2,21 +2,39 @@
 import { defineComponent, ref } from "vue";
 import Elastic from '@/components/Elastic.vue'
 import Kibana from '@/components/Kibana.vue'
+import AdvancedEmulator from "./AdvancedEmulator.vue";
+import Popup from "./Popup.vue";
+import TrialTracker from "./TrialTracker.vue";
+import Keygen from "./Keygen.vue";
 
 export default defineComponent({
   name: 'StyledExperience',
+  components: { Elastic, Kibana, AdvancedEmulator, Popup, TrialTracker, Keygen },
   setup() {
     const panel = ref<string[]>([]);
-    const sliderValue = ref(0); // 0: Elastic, 1: None, 2: Kibana
+    const sliderValue = ref(0);
+    const sliderValue2 = ref(0);
+    const sliderValue3 = ref(0);
+
 
     const changeSliderValue = (value: number) => {
       sliderValue.value = value;
+    };
+    const changeSliderValue2 = (value: number) => {
+      sliderValue2.value = value;
+    };
+    const changeSliderValue3 = (value: number) => {
+      sliderValue3.value = value;
     };
 
     return {
       panel,
       sliderValue,
-      changeSliderValue
+      sliderValue2,
+      sliderValue3,
+      changeSliderValue,
+      changeSliderValue2,
+      changeSliderValue3,
     };
   }
 })
@@ -24,19 +42,17 @@ export default defineComponent({
 
 <template>
   <v-card color="grey-darken-4">
-    <v-card-title class="custom-text-color-title"> Experience </v-card-title>
+    <v-card-title class="custom-text-color-title"> Work Experience at DCS Corp </v-card-title>
     <v-divider />
-    <v-card-text class="custom-grey-background">
-      <v-row>
-        <v-col cols="12" align-self="center">
-          <ul class="bullet-list">
-            <li>DCS is a firm providing engineering, programmatic and technical support services to the Department of Defense and other customers focused on national security</li>
-            <li>I have worked here for nearly 2 years as an intern</li>
-            <li>I was hired by Greg Donarum who is the Belcamp branch supervisor</li>
-          </ul>
-        </v-col>
-      </v-row>
-    </v-card-text>
+    <v-col align="center">
+      <v-card class="visualization-card">
+          <v-card-text>
+            <h3 class="card-header">
+              DCS is a firm providing engineering, programmatic and technical support services to the Department of Defense and other customers focused on national security
+            </h3>
+          </v-card-text>
+        </v-card>
+    </v-col>
 
     <v-expansion-panels v-model="panel" multiple>
       <v-expansion-panel bg-color="grey-darken-4" value="summer2023">
@@ -60,6 +76,10 @@ export default defineComponent({
                 <v-btn color="primary" @click="this.sliderValue = 1">Kibana Visualizations</v-btn>
               </template>
             </v-slider>
+            <div>
+              <Elastic v-if="sliderValue <= 0.5" />
+              <Kibana v-else/>
+            </div>
           </v-expansion-panel-text>
         </v-card>
       </v-expansion-panel>
@@ -69,7 +89,25 @@ export default defineComponent({
           <v-list-item-title class="custom-text-color-title">Winter 2023-2024</v-list-item-title>
         </v-expansion-panel-title>
         <v-expansion-panel-text>
-          <div>test</div>
+          <v-slider
+              v-model="sliderValue2"
+              :max="1"
+              class="mx-4"
+              color="primary"
+              track-color="grey"
+              thumb-color="primary"
+            >
+              <template v-slot:prepend>
+                <v-btn color="primary" @click="this.sliderValue2 = 0">Advanced Emulator Tab</v-btn>
+              </template>
+              <template v-slot:append>
+                <v-btn color="primary" @click="this.sliderValue2 = 1">Reusable Popup</v-btn>
+              </template>
+            </v-slider>
+            <div>
+              <AdvancedEmulator v-if="sliderValue2 <= 0.5" />
+              <Popup v-else/>
+            </div>
         </v-expansion-panel-text>
       </v-expansion-panel>
 
@@ -78,7 +116,25 @@ export default defineComponent({
           <v-list-item-title class="custom-text-color-title">Summer 2024</v-list-item-title>
         </v-expansion-panel-title>
         <v-expansion-panel-text>
-          <div>test</div>
+          <v-slider
+              v-model="sliderValue3"
+              :max="1"
+              class="mx-4"
+              color="primary"
+              track-color="grey"
+              thumb-color="primary"
+            >
+              <template v-slot:prepend>
+                <v-btn color="primary" @click="this.sliderValue3 = 0">Keygen Proj</v-btn>
+              </template>
+              <template v-slot:append>
+                <v-btn color="primary" @click="this.sliderValue3 = 1">Trial Tracker</v-btn>
+              </template>
+            </v-slider>
+            <div>
+              <Keygen v-if="sliderValue3 <= 0.5" />
+              <TrialTracker v-else/>
+            </div>
         </v-expansion-panel-text>
       </v-expansion-panel>
     </v-expansion-panels>
@@ -129,5 +185,36 @@ export default defineComponent({
 
 .custom-grey-background {
   background-color: #393939; /* Medium grey */
+}
+.visualization-card {
+  background-color: #282a2c;
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  line-height: 1.6;
+  color: white;
+}
+
+.card-header {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.card-header::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 3px;
+  background-color: #00fff7;
+  margin-top: 5px;
+}
+
+p {
+  margin-bottom: 15px;
+}
+
+p strong {
+  color: #00d9ff;
 }
 </style>

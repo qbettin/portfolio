@@ -23,7 +23,7 @@ export default defineComponent({
     <v-btn @click="scroll('home')">Home</v-btn>
     <v-btn @click="scroll('resume')">Resume</v-btn>
     <v-btn @click="scroll('experience')">Experience</v-btn>
-    <v-btn @click="scroll('hobbies')">Hobbies</v-btn>
+    <!-- <v-btn @click="scroll('hobbies')">Hobbies</v-btn> -->
   </v-app-bar>
 </template>
 

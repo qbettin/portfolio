@@ -80,9 +80,7 @@ export default defineComponent({
                 <p class="first-line"><strong class="custom-text-color-name">{{ university }}</strong><em class="custom-text-color-first-line">Expected May 2025</em></p>
                 <div class="custom-text-color-description">
                   <p>{{ major }}</p>
-                  <p>Cumulative - GPA 3.2</p>
-                  <p>Sophomore - GPA 3.42</p>
-                  <p>Coursework: Data Structures, Object Oriented Programming, Intro to Software Engineering, Calculus A & B, Discrete/Logistical Mathematics, Intro to Algorithms</p>
+                  <p>Cumulative - GPA 3.25</p>
                 </div>
               </v-card-text>
             </v-card>
@@ -100,9 +98,9 @@ export default defineComponent({
             <v-card elevation="20" color="grey-darken-4">
               <v-card-text>
                 <strong class="custom-text-color-name">Languages</strong>
-                <p class="custom-text-color-description">Java, Python, C, C++, Armv8 Assembly, HTML, CSS, React Libraries, TypeScript/JavaScript</p>
+                <p class="custom-text-color-description">Java, Python, C, C++, HTML, CSS, React Libraries, TypeScript/JavaScript, Vue/Vuetify</p>
                 <strong class="custom-text-color-name">Technologies</strong>
-                <p class="custom-text-color-description">IntelliJ, VS Code, Git, Atlassian Suite, Docker, ActiveMQ, ELK Stack, MongoDB, SourceTree</p>
+                <p class="custom-text-color-description">IntelliJ, VS Code, Git, Atlassian Suite, Docker, ActiveMQ, ELK Stack, MongoDB, SpringBoot</p>
               </v-card-text>
             </v-card>
           </v-expansion-panel-text>
@@ -118,9 +116,54 @@ export default defineComponent({
           <v-expansion-panel-text>
             <v-card elevation="20" color="grey-darken-4">
               <v-card-text>
-                <p class="first-line"><strong class="custom-text-color-name">React Website</strong><em class="custom-text-color-first-line">Student Project</em></p>
-                <p class="custom-text-color-description">Using React Framework, HTML, CSS, TypeScript, and Git. Launched a website using task-based organization in an agile environment. Created TypeScript functions for object-oriented programming.</p>
-                <!-- Add other projects as needed -->
+                <p class="first-line">
+                    <a href="https://ud-s24-cisc374.github.io/final-project-pink/" target="_blank" class="title-link">
+                        <strong class="custom-text-color-name">Bash The Dungeon</strong>
+                    </a>
+                    <em class="custom-text-color-first-line">Student Project</em>
+                </p>
+                <p class="custom-text-color-description">
+                  <ul>
+                    <li>Using Typescript and Phaser, I created an educational game with quality graphics, clear learning objectives, and professional grade mechanics
+                    </li>
+                    <li>Managed the project using Github for version control, feature branches, and task assignment with a project board
+                    </li>
+                    <li>Lead the team with the idea, setup, tileset production, sound fx, and game mechanics
+                    </li>
+                  </ul>
+                </p>
+                <p class="first-line">
+                    <a href="https://ud-s24-cisc374.github.io/coding-2-phaser-tutorial-qbettin/" target="_blank" class="title-link">
+                        <strong class="custom-text-color-name">Platform Game</strong>
+                    </a>
+                    <em class="custom-text-color-first-line">Student Project</em>
+                </p>
+                <p class="custom-text-color-description">
+                  <ul>
+                    <li>Using Typescript and Phaser, I created a basic platform game with some fun mechanics
+                    </li>
+                    <li>Managed the project using Github for version control
+                    </li>
+                    <li>Allowed me to learn Phaser and ultimately make Bash the Dungeon
+                    </li>
+                  </ul>
+                </p>
+                <p class="first-line">
+                    <a href="https://ud-s24-cisc374.github.io/coding-2-phaser-tutorial-qbettin/" target="_blank" class="title-link">
+                        <strong class="custom-text-color-name">Todo Application</strong>
+                    </a>
+                    <em class="custom-text-color-first-line">Student Project</em>
+                </p>
+                <p class="custom-text-color-description">
+                  <ul>
+                    <li>Using a modification of the MEAN stack (swapped Angular for Vue), to create a full-stack Todo application
+                    </li>
+                    <li>Implemented authentication tokens for user login and registration.
+                    </li>
+                    <li>First 'start to finish' full stack CRUD app I made. Setup a vuex store, router, controllers, and mongoDB connections.
+                    </li>
+                  </ul>
+                </p>
               </v-card-text>
             </v-card>
           </v-expansion-panel-text>
@@ -136,11 +179,8 @@ export default defineComponent({
           <v-expansion-panel-text>
             <v-card elevation="20" color="grey-darken-4">
               <v-card-text>
-                <p class = "first-line"><strong class="custom-text-color-name">DCS Corp</strong><em class="custom-text-color-first-line">June 2023 - August 2023</em></p>
-                <p class="custom-text-color-description">Used Atlassian suite (Jira, Bitbucket, Confluence) for Agile Development Process. Dockerized ELK stack and MongoDB instances. Processed and curated data from ActiveMQ to ElasticDB. Utilized Kibana for data visualizations.</p>
-                <p class="custom-text-color-first-line right-line"><em>Jan 2024 - Feb 2024</em></p>
-                <p class="custom-text-color-description">Made custom Vue components for a company site that is being reworked with Vue3 and TypeScript. Re-worked Java backend to accept webservice calls with a new emulator request class which allowed for custom Docker Kickoff messages for emulator creation. </p>
-
+                <p class = "first-line"><strong class="custom-text-color-name">DCS Corp</strong><em class="custom-text-color-first-line">June 2023 - Feb 2025</em></p>
+                <p class="custom-text-color-description">Effectively worked within an Agile environment to create software solutions by implementing and improving features on company web applications. Often was doing complete full-stack development to accomplish the task at hand, all while demoing work and recieving feedback from daily standups and spring reviews.</p>
               </v-card-text>
             </v-card>
           </v-expansion-panel-text>
@@ -156,7 +196,7 @@ export default defineComponent({
           <v-expansion-panel-text>
             <v-card elevation="20" color="grey-darken-4">
               <v-card-text>
-                <p class="first-line"><strong class="custom-text-color-name">Delaware Innovations Fellow (DIF)</strong><em class="custom-text-color-first-line">Sep 2021 - Present</em></p>
+                <p class="first-line"><strong class="custom-text-color-name">Delaware Innovations Fellow (DIF)</strong><em class="custom-text-color-first-line">Sep 2021 - Sep 2024</em></p>
                 <p class="custom-text-color-description">Students creating opportunities with personalized projects and spirit-building events. Showcasing overlapping projects to find solutions that fit students' expertise.</p>
                 <p class="first-line"><strong class="custom-text-color-name">CS + Social Good Club</strong><em class="custom-text-color-first-line">March 2022 - December 2023</em></p>
                 <p class="custom-text-color-description">Students actively involved in using CS for positive social change. App creation, website deployment, and problem-solving for specific organizations.</p>
@@ -170,6 +210,14 @@ export default defineComponent({
   
   
   <style scoped>
+  .title-link {
+    text-decoration: underline; /* Underlines the title */
+    color: inherit; /* Keeps the original text color */
+  }
+
+  .title-link:hover {
+    color: blue; /* Optional: Change color on hover to mimic link behavior */
+  }
   .styled-resume {
     padding: 0px;
   }
