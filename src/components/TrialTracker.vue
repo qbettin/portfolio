@@ -12,7 +12,7 @@ export default {
         <v-card-text>
           <h3 class="card-header">Trial Tracker Redesign</h3>
           <p>
-            Lead a team of 3 interns in the <strong>complete redesign</strong> of a Trial Tracker application used during live events. We were tasked with making it simpler and faster to use. We fiorst drew <strong>mockups, entity relationship diagrams, and data flow charts</strong> to conceptualize the project.
+            Lead a team of 3 interns in the <strong>complete redesign</strong> of a Trial Tracker application used during live events. We were tasked with making it simpler and faster to use. We first drew <strong>mockups, entity relationship diagrams, and data flow charts</strong> to conceptualize the project.
           </p>
           <p>
             We followed Agile methodolgy in creating workable tickets from user stories, and in estimating and assigning work. This involved <strong>full stack development</strong> using <strong>Vue, Typescript, Java, and SpringBoot</strong>

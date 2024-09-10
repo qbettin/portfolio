@@ -12,7 +12,7 @@ export default {
         <v-card-text>
           <h3 class="card-header">Advanced Emulator Tab</h3>
           <p>
-            I made an addition to a company internal tool which allowed users to add emulators and edit all of the properties. This was done by constucting a text area which displayed as an <strong>editable JSON.</strong> Each property was editable and some select properties were set up to mock store values. This payload was sent to the backend to be parsed as a <strong>Docker Kickoff Message</strong> which added that emulator to the map.
+            I made an addition to a company internal tool which allowed users to add emulators and edit all of the properties. This was done by constructing a text area which displayed as an <strong>editable JSON.</strong> Each property was editable and some select properties were set up to mock store values. This payload was sent to the backend to be parsed as a <strong>Docker Kickoff Message</strong> which added that emulator to the map.
           </p>
           <p>
             Created <strong>unit tests</strong> with <strong>MockMvc</strong> to ensure its correctness. This feature on the site is used quite exensively and was my greatest achievement at the time. Increased my knowledge of <strong>Vue and Typescript</strong>, as I had to work with <strong>Pinia stores, watchers, refs</strong>, and other Vue component syntax.

@@ -12,7 +12,7 @@ export default {
         <v-card-text>
           <h3 class="card-header">Keygen Project</h3>
           <p>
-            Created the entire frontend for an existing but new Keygen project. This project was used to <strong>generate sign keys</strong> which were used when connecting to emulated controllers. The problem was creating <strong>lots of keys</strong> at once, as creating them is tedious.
+            Created the entire frontend for an existing but new Keygen project. This project was used to <strong>generate signed keys</strong> which were used when connecting to emulated controllers. The problem was creating <strong>lots of keys</strong> at once, as creating them is tedious.
           </p>
           <p>
             Recursively generated keys with the use of <strong>wildcards</strong>. When an asterisk * was present in the keyname, it gave users an option for a <strong>term</strong> or <strong>range</strong> selection.
