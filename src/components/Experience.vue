@@ -4,8 +4,8 @@ import Elastic from '@/components/Elastic.vue'
 import Kibana from '@/components/Kibana.vue'
 import AdvancedEmulator from "./AdvancedEmulator.vue";
 import Popup from "./Popup.vue";
-import TrialTracker from "./TrialTracker.vue";
 import Keygen from "./Keygen.vue";
+import TrialTracker from "./TrialTracker.vue";
 
 export default defineComponent({
   name: 'StyledExperience',
@@ -55,6 +55,58 @@ export default defineComponent({
     </v-col>
 
     <v-expansion-panels v-model="panel" multiple>
+      <v-expansion-panel bg-color="grey-darken-4" value="summer2024">
+        <v-expansion-panel-title color="grey-darken-4">
+          <v-list-item-title class="custom-text-color-title">Summer 2024</v-list-item-title>
+        </v-expansion-panel-title>
+        <v-expansion-panel-text>
+          <v-slider
+              v-model="sliderValue3"
+              :max="1"
+              class="mx-4"
+              color="primary"
+              track-color="grey"
+              thumb-color="primary"
+            >
+              <template v-slot:prepend>
+                <v-btn color="primary" @click="this.sliderValue3 = 0">Trial Tracker</v-btn>
+              </template>
+              <template v-slot:append>
+                <v-btn color="primary" @click="this.sliderValue3 = 1">Keygen Proj</v-btn>
+              </template>
+            </v-slider>
+            <div>
+              <TrialTracker v-if="sliderValue3 <= 0.5" />
+              <Keygen v-else/>
+            </div>
+        </v-expansion-panel-text>
+      </v-expansion-panel>
+      <v-expansion-panel bg-color="grey-darken-4" value="winter2023-2024">
+        <v-expansion-panel-title color="grey-darken-4">
+          <v-list-item-title class="custom-text-color-title">Winter 2023-2024</v-list-item-title>
+        </v-expansion-panel-title>
+        <v-expansion-panel-text>
+          <v-slider
+              v-model="sliderValue2"
+              :max="1"
+              class="mx-4"
+              color="primary"
+              track-color="grey"
+              thumb-color="primary"
+            >
+              <template v-slot:prepend>
+                <v-btn color="primary" @click="this.sliderValue2 = 0">Advanced Emulator Tab</v-btn>
+              </template>
+              <template v-slot:append>
+                <v-btn color="primary" @click="this.sliderValue2 = 1">Reusable Popup</v-btn>
+              </template>
+            </v-slider>
+            <div>
+              <AdvancedEmulator v-if="sliderValue2 <= 0.5" />
+              <Popup v-else/>
+            </div>
+        </v-expansion-panel-text>
+      </v-expansion-panel>
       <v-expansion-panel bg-color="grey-darken-4" value="summer2023">
         <v-card color="grey-darken-4">
           <v-expansion-panel-title color="grey-darken-4">
@@ -82,60 +134,6 @@ export default defineComponent({
             </div>
           </v-expansion-panel-text>
         </v-card>
-      </v-expansion-panel>
-
-      <v-expansion-panel bg-color="grey-darken-4" value="winter2023-2024">
-        <v-expansion-panel-title color="grey-darken-4">
-          <v-list-item-title class="custom-text-color-title">Winter 2023-2024</v-list-item-title>
-        </v-expansion-panel-title>
-        <v-expansion-panel-text>
-          <v-slider
-              v-model="sliderValue2"
-              :max="1"
-              class="mx-4"
-              color="primary"
-              track-color="grey"
-              thumb-color="primary"
-            >
-              <template v-slot:prepend>
-                <v-btn color="primary" @click="this.sliderValue2 = 0">Advanced Emulator Tab</v-btn>
-              </template>
-              <template v-slot:append>
-                <v-btn color="primary" @click="this.sliderValue2 = 1">Reusable Popup</v-btn>
-              </template>
-            </v-slider>
-            <div>
-              <AdvancedEmulator v-if="sliderValue2 <= 0.5" />
-              <Popup v-else/>
-            </div>
-        </v-expansion-panel-text>
-      </v-expansion-panel>
-
-      <v-expansion-panel bg-color="grey-darken-4" value="summer2024">
-        <v-expansion-panel-title color="grey-darken-4">
-          <v-list-item-title class="custom-text-color-title">Summer 2024</v-list-item-title>
-        </v-expansion-panel-title>
-        <v-expansion-panel-text>
-          <v-slider
-              v-model="sliderValue3"
-              :max="1"
-              class="mx-4"
-              color="primary"
-              track-color="grey"
-              thumb-color="primary"
-            >
-              <template v-slot:prepend>
-                <v-btn color="primary" @click="this.sliderValue3 = 0">Keygen Proj</v-btn>
-              </template>
-              <template v-slot:append>
-                <v-btn color="primary" @click="this.sliderValue3 = 1">Trial Tracker</v-btn>
-              </template>
-            </v-slider>
-            <div>
-              <Keygen v-if="sliderValue3 <= 0.5" />
-              <TrialTracker v-else/>
-            </div>
-        </v-expansion-panel-text>
       </v-expansion-panel>
     </v-expansion-panels>
   </v-card>
